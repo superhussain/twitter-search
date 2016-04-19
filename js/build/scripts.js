@@ -1,0 +1,1 @@
+$(function(){getTweets()});var getTweets=function(){$("form#search").submit(function(e){var t=$(this).serialize();return $.ajax({type:"POST",url:"php/get_tweets.php",data:t,dataType:"json",success:function(e){tweets=e,console.log(tweets)},error:function(e){console.log(e)}}),!1})};

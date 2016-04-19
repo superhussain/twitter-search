@@ -1,0 +1,24 @@
+{
+  "name": "keyhole-twitter",
+  "version": "0.0.1",
+  "description": "Simple Twitter Search App",
+  "author": {
+    "name": "Hussain Abbas",
+    "email": "howdy@hussainabbas.com",
+    "url": "https://github.com/superhussain"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer-stylus": "^0.9.2",
+    "browser-sync": "^2.9.3",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-jshint": "^1.11.2",
+    "gulp-stylus": "^2.3.1",
+    "gulp-uglify": "^1.4.1",
+    "jshint": "^2.9.1",
+    "stylus": "^0.54.2"
+  },
+  "author": "Hussain Abbas",
+  "license": "MIT"
+}

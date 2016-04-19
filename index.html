@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<title>Twitter v1.1 API - A JavaScript and PHP solution</title>
+    <meta charset="utf-8">
+    <title>Keyhole Twitter Search</title>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="author" content="Hussain Abbas">
+    <meta name="description" content="Keyhole twitter search app">
+
+    <link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
-    <form id="search">
-      <input id="searchBox" type="text" name="search" placeholder="Keyhole, NBA Playoffs...">
-      <input type="submit" value="Submit" name="submit">
-    </form>
-		<div class="tweets-container">
-			<p>Loading...</p>
-		</div>
-		<script src="jquery-1.11.1.min.js"></script>
-		<script src="tweets.js"></script>
+    <section id="hero">
+      <div class="wrapper">
+        <h1>Twitter Search</h1>
+        <form id="search">
+          <input id="searchBox" type="text" name="search" placeholder="Keyhole, NBA Playoffs...">
+          <input type="submit" value="Submit" name="submit">
+        </form>
+        <p>Enter your search term to view the most popular recent tweets!</p>
+      </div>
+    </section>
+
+    <section id="results">
+      <div class="wrapper">
+        <p>There was an error.</p>
+      </div>
+    </section>
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/scripts.js"></script>
 	</body>
 </html>
