@@ -250,11 +250,83 @@ section#hero .wrapper form#search input[type="text"] {
   width: 60%;
 }
 section#hero .wrapper form#search input[type="submit"] {
-  width: 20%;
-  background-color: #4183d7;
+  width: 23%;
+  background-color: transparent;
+  box-shadow: inset 0px 0px 0px 5px #fff;
   color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+section#hero .wrapper form#search input[type="submit"]:hover {
+  background-color: #4183d7;
+  box-shadow: none;
 }
 section#results {
-  background: #ff0;
+  background-color: #fafafa;
+  font-family: "Roboto";
   display: none;
+}
+section#results .list {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+section#results .list .tweet {
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin: 1em 0;
+  padding: 1em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+section#results .list .tweet .user-image {
+  width: 50px;
+}
+section#results .list .tweet .user-image img {
+  width: 50px;
+  border-radius: 5px;
+}
+section#results .list .tweet .tweet-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 1em;
+}
+section#results .list .tweet .tweet-info .line1 a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #333;
+}
+section#results .list .tweet .tweet-info .line1 span {
+  color: #aaa;
+  font-weight: 300;
+  font-size: 0.8em;
+}
+section#results .list .tweet .tweet-info .tweet-text {
+  text-decoration: none;
+  color: #555;
+}
+section#results .list .tweet .tweet-info .tweet-text p {
+  margin: 5px 0;
+}
+section#results .list .tweet .tweet-info .line3 span {
+  font-size: 0.8em;
+  color: #aaa;
+}
+section#results .list .tweet .tweet-info .line3 span i {
+  font-size: 1.2em;
+}
+section#results .list .tweet .tweet-info .line3 .favorites {
+  padding-left: 4em;
 }

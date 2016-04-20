@@ -1,34 +1,54 @@
 <!DOCTYPE html>
-<html>
-	<head>
-    <meta charset="utf-8">
-    <title>Keyhole Twitter Search</title>
+<html ng-app="app">
 
-    <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <meta name="author" content="Hussain Abbas">
-    <meta name="description" content="Keyhole twitter search app">
+<head>
+  <meta charset="utf-8">
+  <title>Keyhole Twitter Search</title>
 
-    <link rel="stylesheet" href="css/main.css">
-	</head>
-	<body>
-    <section id="hero">
-      <div class="wrapper">
-        <h1>Twitter Search</h1>
-        <form id="search">
-          <input id="searchBox" type="text" name="search" placeholder="Keyhole, NBA Playoffs...">
-          <input type="submit" value="Submit" name="submit">
-        </form>
-        <p>Enter your search term to view the most popular recent tweets!</p>
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <meta name="author" content="Hussain Abbas">
+  <meta name="description" content="Keyhole twitter search app">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <section id="hero">
+    <div class="wrapper">
+      <h1>Twitter Search</h1>
+      <form id="search">
+        <input id="searchBox" type="text" name="search" placeholder="Keyhole, NBA Playoffs...">
+        <input type="submit" value="Submit" name="submit">
+      </form>
+      <p>Enter your search term to view the most popular recent tweets!</p>
+    </div>
+  </section>
+
+  <section id="results" ng-controller="AppCtrl as ctrl">
+    <div class="list">
+      <div class="tweet" ng-repeat="tweet in tweets">
+        <a class="user-image" ng-href="https://twitter.com/{{tweet.user.screen_name}}"><img src="{{tweet.user.profile_image_url_https}}" alt="{{tweet.user.name}}"></a>
+        <div class="tweet-info">
+          <div class="line1">
+            <a ng-href="https://twitter.com/{{tweet.user.screen_name}}">{{tweet.user.name}}</a>
+            <span class="gray">@{{tweet.user.screen_name}}</span>
+          </div>
+          <a class="tweet-text" ng-href="https://twitter.com/{{tweet.user.screen_name}}/status/{{tweet.id}}"><p>{{tweet.text}}</p></a>
+          <div class="line3">
+            <span class="retweets"><i class="fa fa-retweet"></i> {{tweet.retweet_count}}</span>
+            <span class="favorites"><i class="fa fa-heart"></i> {{tweet.favorite_count}}</span>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="results">
-      <div class="wrapper">
-        <p>There was an error.</p>
-      </div>
-    </section>
+  <script src="js/lib/angular.min.js"></script>
+  <script src="js/lib/jquery.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/app.js"></script>
 
-		<script src="js/lib/jquery.min.js"></script>
-		<script src="js/scripts.js"></script>
-	</body>
+</body>
+
 </html>

@@ -26,7 +26,14 @@ section#hero
       input[type="text"]
         width: 60%
       input[type="submit"]
-        width: 20%
-        background-color: $blue
+        width: 23%
+        background-color: transparent
+        box-shadow: inset 0px 0px 0px 5px $white
         color: $white
+        text-transform: uppercase
+        letter-spacing: 4px
+        transition: all 300ms ease-in-out
+        &:hover
+          background-color: $blue
+          box-shadow: none
 

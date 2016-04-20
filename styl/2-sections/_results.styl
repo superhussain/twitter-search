@@ -1,3 +1,46 @@
 section#results
-  background: yellow
+  background-color: #fafafa
+  font-family: "Roboto"
   display: none;
+  .list
+    width: 90%
+    max-width: 600px
+    margin: 0 auto
+    .tweet
+      background: $white
+      border-radius: 5px
+      border: 1px solid #ddd
+      margin: 1em 0
+      padding: 1em
+      display: flex
+      .user-image
+        width: 50px
+        img
+          width: 50px
+          border-radius: 5px
+      .tweet-info
+        display: flex
+        flex-direction: column
+        padding-left: 1em
+        .line1
+          a
+            text-decoration: none
+            font-weight: 700
+            color: #333
+          span
+            color: #aaa
+            font-weight: 300
+            font-size: 0.8em
+        .tweet-text
+          text-decoration: none
+          color: #555
+          p
+            margin: 5px 0
+        .line3
+          span
+            font-size: 0.8em
+            color: #aaa
+            i
+              font-size: 1.2em
+          .favorites
+            padding-left: 4em

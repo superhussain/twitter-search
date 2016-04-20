@@ -13,7 +13,15 @@ var getTweets = function() {
       dataType: 'json',
       success: function(response) {
         tweets = response;
-        console.log(tweets);
+        var scope = angular.element($("#results")).scope();
+        scope.safeApply(function(){
+          scope.tweets = tweets.statuses;
+        });
+        console.log(scope.tweets);
+        $('#results').fadeIn('fast');
+        $('html, body').animate({
+          scrollTop: $("#results").offset().top
+        }, 400);
       },
       error: function(errors) {
         console.log(errors);
