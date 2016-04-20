@@ -35,7 +35,7 @@
             <a ng-href="https://twitter.com/{{tweet.user.screen_name}}">{{tweet.user.name}}</a>
             <span class="gray">@{{tweet.user.screen_name}}</span>
           </div>
-          <a class="tweet-text" ng-href="https://twitter.com/{{tweet.user.screen_name}}/status/{{tweet.id}}"><p>{{tweet.text}}</p></a>
+          <a class="tweet-text" ng-href="https://twitter.com/{{tweet.user.screen_name}}/status/{{tweet.id_str}}"><p>{{tweet.text}}</p></a>
           <div class="line3">
             <span class="retweets"><i class="fa fa-retweet"></i> {{tweet.retweet_count}}</span>
             <span class="favorites"><i class="fa fa-heart"></i> {{tweet.favorite_count}}</span>
