@@ -3,9 +3,12 @@ section#results
   font-family: "Roboto"
   display: none
   .list
-    width: 90%
-    max-width: 600px
+    width: 100%
+    // max-width: 600px
     margin: 0 auto
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
     .title
       text-align: center
       font-size: 1.3em
@@ -13,6 +16,7 @@ section#results
       font-weight: 900
       color: #aaa
       margin: 3em 0
+      width: 100%
       span
         font-size: 1.5em
         font-family: "Roboto Slab"
@@ -22,9 +26,10 @@ section#results
       background: $white
       border-radius: 5px
       border: 1px solid #ddd
-      margin: 1em 0
+      margin: 1em
       padding: 1em
       display: flex
+      width: 500px
       .user-image
         width: 50px
         img

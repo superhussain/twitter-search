@@ -5,6 +5,7 @@ $(function(){
 
 var getTweets = function() {
   $('form#search').submit(function(e) {
+    $('.loading').fadeIn(400);
     var fields = $(this).serialize();
     $.ajax({
       type: "POST",
@@ -23,6 +24,7 @@ var getTweets = function() {
         $('html, body').animate({
           scrollTop: $("#results").offset().top
         }, 1000);
+        $('.loading').fadeOut(400);
       },
       error: function(errors) {
         console.log(errors);
