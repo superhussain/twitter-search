@@ -28,7 +28,7 @@
   <section id="results" ng-controller="AppCtrl as ctrl">
     <div class="list">
       <p class="title">showing results for: <span>{{searchTerm}}</span></p>
-      <div class="tweet" ng-repeat="tweet in tweets">
+      <div class="tweet" ng-repeat="tweet in tweets | orderBy:scoreSort">
         <a class="user-image" ng-href="https://twitter.com/{{tweet.user.screen_name}}"><img src="{{tweet.user.profile_image_url_https}}" alt="{{tweet.user.name}}"></a>
         <div class="tweet-info">
           <div class="line1">

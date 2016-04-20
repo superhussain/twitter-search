@@ -15,4 +15,9 @@ angular.module('app', [])
     }
   };
 
+  $scope.scoreSort = function(tweet) {
+    var score = tweet.retweet_count + tweet.favorite_count;
+    return -score;
+  };
+
 });
