@@ -2,6 +2,7 @@ angular.module('app', [])
 
 .controller('AppCtrl', function($scope) {
   $scope.tweets = [];
+  $scope.searchTerm = '';
 
   $scope.safeApply = function( fn ) {
     var phase = this.$root.$$phase;

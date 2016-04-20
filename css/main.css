@@ -216,10 +216,10 @@ section .wrapper {
   font-family: "Roboto";
 }
 section#hero {
-  background-image: url("../img/bg3.jpg");
+  background-image: url("../img/bg.png");
 }
 section#hero .wrapper {
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.3);
   padding: 3em 0;
   border-radius: 1em;
   color: #fff;
@@ -272,6 +272,20 @@ section#results .list {
   width: 90%;
   max-width: 600px;
   margin: 0 auto;
+}
+section#results .list .title {
+  text-align: center;
+  font-size: 1.3em;
+  letter-spacing: 2px;
+  font-weight: 900;
+  color: #aaa;
+  margin: 3em 0;
+}
+section#results .list .title span {
+  font-size: 1.5em;
+  font-family: "Roboto Slab";
+  border-bottom: 5px solid;
+  color: #4183d7;
 }
 section#results .list .tweet {
   background: #fff;
